@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import ProfileCard from './ProfileCard';
+import BlogCard from './BlogCard';
+import FormWithValidation from './FormWithValidation';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <h1>Reusable Components</h1>
+
+        <h2>Profile Card</h2>
+        <ProfileCard
+            name="John Doe"
+            image="https://via.placeholder.com/100"
+            description="A passionate developer."
+        />
+
+        <h2>Blog Card</h2>
+        <BlogCard
+            title="React Basics"
+            description="Learn the fundamentals of React in this post."
+            imageUrl="https://via.placeholder.com/300x200"
+        />
+
+        <h2>Form with Validation</h2>
+        <FormWithValidation />
+      </div>
   );
-}
+};
 
 export default App;
